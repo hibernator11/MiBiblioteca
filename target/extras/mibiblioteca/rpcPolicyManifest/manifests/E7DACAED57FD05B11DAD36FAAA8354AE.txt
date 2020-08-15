@@ -1,0 +1,2 @@
+serviceClass: es.tion.ua.biblioteca.client.GreetingService
+path: 6E1AA91E476AAFFCA6F48B028C0B4292.gwt.rpc
