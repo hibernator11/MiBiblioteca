@@ -2,6 +2,7 @@ es/tion/ua/biblioteca/shared/FieldVerifier.class
 es/tion/ua/biblioteca/client/GreetingService.class
 es/tion/ua/biblioteca/client/MiBiblioteca$1.class
 es/tion/ua/biblioteca/client/MiBiblioteca.class
+es/tion/ua/biblioteca/client/TablaLibros.class
 es/tion/ua/biblioteca/server/GreetingServiceImpl.class
 es/tion/ua/biblioteca/client/GreetingServiceAsync.class
 es/tion/ua/biblioteca/client/MiBiblioteca$1MyHandler.class

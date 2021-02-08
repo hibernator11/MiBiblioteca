@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <metrics version="1" >
- <module elapsed="2611" >
-  <sources count="3355">
+ <module elapsed="13481" >
+  <sources count="3356">
    <source name="com/google/gwt/animation/client/Animation.java" />
    <source name="com/google/gwt/animation/client/AnimationScheduler.java" />
    <source name="com/google/gwt/animation/client/AnimationSchedulerImplStandard.java" />
@@ -3012,6 +3012,7 @@
    <source name="es/tion/ua/biblioteca/client/GreetingService.java" />
    <source name="es/tion/ua/biblioteca/client/GreetingServiceAsync.java" />
    <source name="es/tion/ua/biblioteca/client/MiBiblioteca.java" />
+   <source name="es/tion/ua/biblioteca/client/TablaLibros.java" />
    <source name="es/tion/ua/biblioteca/shared/FieldVerifier.java" />
    <source name="java/beans/Beans.java" />
    <source name="java/io/ByteArrayInputStream.java" />
@@ -3358,7 +3359,7 @@
    <source name="javax/validation/spi/ConfigurationState.java" />
    <source name="javax/validation/spi/ValidationProvider.java" />
   </sources>
-  <types kind="initial" count="4067">
+  <types kind="initial" count="4068">
    <type name="com.google.gwt.animation.client.Animation" />
    <type name="com.google.gwt.animation.client.AnimationScheduler" />
    <type name="com.google.gwt.animation.client.AnimationScheduler.AnimationCallback" />
@@ -6880,6 +6881,7 @@
    <type name="es.tion.ua.biblioteca.client.GreetingService" />
    <type name="es.tion.ua.biblioteca.client.GreetingServiceAsync" />
    <type name="es.tion.ua.biblioteca.client.MiBiblioteca" />
+   <type name="es.tion.ua.biblioteca.client.TablaLibros" />
    <type name="es.tion.ua.biblioteca.shared.FieldVerifier" />
    <type name="java.beans.Beans" />
    <type name="java.io.ByteArrayInputStream" />
@@ -7429,8 +7431,8 @@
   </types>
  </module>
  <precompilations>
-  <precompilation base="0" ids="0,1,2,3,4" elapsed="4052" >
-   <types kind="ast" count="859">
+  <precompilation base="0" ids="0,1,2,3,4" elapsed="15356" >
+   <types kind="ast" count="872">
     <type name="com.google.gwt.animation.client.Animation" />
     <type name="com.google.gwt.animation.client.Animation$1" />
     <type name="com.google.gwt.animation.client.AnimationScheduler" />
@@ -7824,6 +7826,8 @@
     <type name="com.google.gwt.user.client.impl.DOMImplStandardBase" />
     <type name="com.google.gwt.user.client.impl.DOMImplTrident" />
     <type name="com.google.gwt.user.client.impl.DOMImplWebkit" />
+    <type name="com.google.gwt.user.client.impl.ElementMapperImpl" />
+    <type name="com.google.gwt.user.client.impl.ElementMapperImpl$FreeNode" />
     <type name="com.google.gwt.user.client.impl.EventMap" />
     <type name="com.google.gwt.user.client.impl.WindowImpl" />
     <type name="com.google.gwt.user.client.impl.WindowImplIE" />
@@ -7897,8 +7901,18 @@
     <type name="com.google.gwt.user.client.ui.DialogBox$CaptionImpl" />
     <type name="com.google.gwt.user.client.ui.DialogBox$MouseHandler" />
     <type name="com.google.gwt.user.client.ui.DirectionalTextHelper" />
+    <type name="com.google.gwt.user.client.ui.FlexTable" />
+    <type name="com.google.gwt.user.client.ui.FlexTable$FlexCellFormatter" />
     <type name="com.google.gwt.user.client.ui.FocusWidget" />
     <type name="com.google.gwt.user.client.ui.HTML" />
+    <type name="com.google.gwt.user.client.ui.HTMLTable" />
+    <type name="com.google.gwt.user.client.ui.HTMLTable$1" />
+    <type name="com.google.gwt.user.client.ui.HTMLTable$Cell" />
+    <type name="com.google.gwt.user.client.ui.HTMLTable$CellFormatter" />
+    <type name="com.google.gwt.user.client.ui.HTMLTable$ColumnFormatter" />
+    <type name="com.google.gwt.user.client.ui.HTMLTable$HTMLTableIEImpl" />
+    <type name="com.google.gwt.user.client.ui.HTMLTable$HTMLTableStandardImpl" />
+    <type name="com.google.gwt.user.client.ui.HTMLTable$RowFormatter" />
     <type name="com.google.gwt.user.client.ui.HasHorizontalAlignment$AutoHorizontalAlignmentConstant" />
     <type name="com.google.gwt.user.client.ui.HasHorizontalAlignment$HorizontalAlignmentConstant" />
     <type name="com.google.gwt.user.client.ui.HasVerticalAlignment$VerticalAlignmentConstant" />
@@ -7974,6 +7988,7 @@
     <type name="es.tion.ua.biblioteca.client.MiBiblioteca$1" />
     <type name="es.tion.ua.biblioteca.client.MiBiblioteca$1MyHandler" />
     <type name="es.tion.ua.biblioteca.client.MiBiblioteca$1MyHandler$1" />
+    <type name="es.tion.ua.biblioteca.client.TablaLibros" />
     <type name="es.tion.ua.biblioteca.shared.FieldVerifier" />
     <type name="java.io.FilterOutputStream" />
     <type name="java.io.IOException" />
@@ -8321,29 +8336,29 @@
  </precompilation>
  </precompilations>
  <compilations>
-  <compilation  id="0" elapsed="2030" totalElapsed="6088"  description="ClientBundle.enableInlining=true,compiler.emulatedStack=false,compiler.predeclare.cross.fragment.references=false,compiler.stackMode=native,compiler.useSymbolMaps=false,gwt.cspCompatModeEnabled=false,gwt.enableDebugId=false,gwt.forceBidi=false,gwt.logging.simpleConsoleHandler=ENABLED,gwt.suppressNonStaticFinalFieldWarnings=false,gwt.uncaughtexceptionhandler.windowonerror=REPORT_IF_NO_HANDLER,history.noDoubleEncoding=false,jre.checks.api=AUTO,jre.checks.bounds=AUTO,jre.checks.checkLevel=NORMAL,jre.checks.numeric=AUTO,jre.checks.type=AUTO,jre.logging.simpleConsoleHandler=ENABLED,locale=default,rpc.XserializeFinalFields=false,superdevmode=off,user.agent=ie8,videoElementSupport=no,webApiUsage=modern,audioElementSupport=no,canvasElementSupport=no,compiler.useSourceMaps=false,dragEventSupport=no,jre.debugMode=DISABLED,touchEventSupport=no,gwt.logging.enabled=FALSE,jre.checkedMode=DISABLED,jre.logging.logLevel=OFF">
-   <javascript size="92848" fragments="1">
-    <fragment initial="true" size="92848" />
+  <compilation  id="0" elapsed="2671" totalElapsed="18033"  description="ClientBundle.enableInlining=true,compiler.emulatedStack=false,compiler.predeclare.cross.fragment.references=false,compiler.stackMode=native,compiler.useSymbolMaps=false,gwt.cspCompatModeEnabled=false,gwt.enableDebugId=false,gwt.forceBidi=false,gwt.logging.simpleConsoleHandler=ENABLED,gwt.suppressNonStaticFinalFieldWarnings=false,gwt.uncaughtexceptionhandler.windowonerror=REPORT_IF_NO_HANDLER,history.noDoubleEncoding=false,jre.checks.api=AUTO,jre.checks.bounds=AUTO,jre.checks.checkLevel=NORMAL,jre.checks.numeric=AUTO,jre.checks.type=AUTO,jre.logging.simpleConsoleHandler=ENABLED,locale=default,rpc.XserializeFinalFields=false,superdevmode=off,user.agent=ie8,videoElementSupport=no,webApiUsage=modern,audioElementSupport=no,canvasElementSupport=no,compiler.useSourceMaps=false,dragEventSupport=no,jre.debugMode=DISABLED,touchEventSupport=no,gwt.logging.enabled=FALSE,jre.checkedMode=DISABLED,jre.logging.logLevel=OFF">
+   <javascript size="96378" fragments="1">
+    <fragment initial="true" size="96378" />
    </javascript>
   </compilation>
-  <compilation  id="1" elapsed="1667" totalElapsed="8018"  description="ClientBundle.enableInlining=true,compiler.emulatedStack=false,compiler.predeclare.cross.fragment.references=false,compiler.stackMode=native,compiler.useSymbolMaps=false,gwt.cspCompatModeEnabled=false,gwt.enableDebugId=false,gwt.forceBidi=false,gwt.logging.simpleConsoleHandler=ENABLED,gwt.suppressNonStaticFinalFieldWarnings=false,gwt.uncaughtexceptionhandler.windowonerror=REPORT_IF_NO_HANDLER,history.noDoubleEncoding=false,jre.checks.api=AUTO,jre.checks.bounds=AUTO,jre.checks.checkLevel=NORMAL,jre.checks.numeric=AUTO,jre.checks.type=AUTO,jre.logging.simpleConsoleHandler=ENABLED,locale=default,rpc.XserializeFinalFields=false,superdevmode=off,user.agent=ie9,videoElementSupport=maybe,webApiUsage=modern,audioElementSupport=maybe,canvasElementSupport=maybe,compiler.useSourceMaps=false,dragEventSupport=maybe,jre.debugMode=DISABLED,touchEventSupport=no,gwt.logging.enabled=FALSE,jre.checkedMode=DISABLED,jre.logging.logLevel=OFF">
-   <javascript size="92063" fragments="1">
-    <fragment initial="true" size="92063" />
+  <compilation  id="1" elapsed="2230" totalElapsed="20576"  description="ClientBundle.enableInlining=true,compiler.emulatedStack=false,compiler.predeclare.cross.fragment.references=false,compiler.stackMode=native,compiler.useSymbolMaps=false,gwt.cspCompatModeEnabled=false,gwt.enableDebugId=false,gwt.forceBidi=false,gwt.logging.simpleConsoleHandler=ENABLED,gwt.suppressNonStaticFinalFieldWarnings=false,gwt.uncaughtexceptionhandler.windowonerror=REPORT_IF_NO_HANDLER,history.noDoubleEncoding=false,jre.checks.api=AUTO,jre.checks.bounds=AUTO,jre.checks.checkLevel=NORMAL,jre.checks.numeric=AUTO,jre.checks.type=AUTO,jre.logging.simpleConsoleHandler=ENABLED,locale=default,rpc.XserializeFinalFields=false,superdevmode=off,user.agent=ie9,videoElementSupport=maybe,webApiUsage=modern,audioElementSupport=maybe,canvasElementSupport=maybe,compiler.useSourceMaps=false,dragEventSupport=maybe,jre.debugMode=DISABLED,touchEventSupport=no,gwt.logging.enabled=FALSE,jre.checkedMode=DISABLED,jre.logging.logLevel=OFF">
+   <javascript size="95773" fragments="1">
+    <fragment initial="true" size="95773" />
    </javascript>
   </compilation>
-  <compilation  id="2" elapsed="1400" totalElapsed="9555"  description="ClientBundle.enableInlining=true,compiler.emulatedStack=false,compiler.predeclare.cross.fragment.references=false,compiler.stackMode=native,compiler.useSymbolMaps=false,gwt.cspCompatModeEnabled=false,gwt.enableDebugId=false,gwt.forceBidi=false,gwt.logging.simpleConsoleHandler=ENABLED,gwt.suppressNonStaticFinalFieldWarnings=false,gwt.uncaughtexceptionhandler.windowonerror=REPORT_IF_NO_HANDLER,history.noDoubleEncoding=false,jre.checks.api=AUTO,jre.checks.bounds=AUTO,jre.checks.checkLevel=NORMAL,jre.checks.numeric=AUTO,jre.checks.type=AUTO,jre.logging.simpleConsoleHandler=ENABLED,locale=default,rpc.XserializeFinalFields=false,superdevmode=off,user.agent=ie10,videoElementSupport=maybe,webApiUsage=modern,audioElementSupport=maybe,canvasElementSupport=maybe,compiler.useSourceMaps=false,dragEventSupport=maybe,jre.debugMode=DISABLED,touchEventSupport=no,gwt.logging.enabled=FALSE,jre.checkedMode=DISABLED,jre.logging.logLevel=OFF">
-   <javascript size="91924" fragments="1">
-    <fragment initial="true" size="91924" />
+  <compilation  id="2" elapsed="1888" totalElapsed="22669"  description="ClientBundle.enableInlining=true,compiler.emulatedStack=false,compiler.predeclare.cross.fragment.references=false,compiler.stackMode=native,compiler.useSymbolMaps=false,gwt.cspCompatModeEnabled=false,gwt.enableDebugId=false,gwt.forceBidi=false,gwt.logging.simpleConsoleHandler=ENABLED,gwt.suppressNonStaticFinalFieldWarnings=false,gwt.uncaughtexceptionhandler.windowonerror=REPORT_IF_NO_HANDLER,history.noDoubleEncoding=false,jre.checks.api=AUTO,jre.checks.bounds=AUTO,jre.checks.checkLevel=NORMAL,jre.checks.numeric=AUTO,jre.checks.type=AUTO,jre.logging.simpleConsoleHandler=ENABLED,locale=default,rpc.XserializeFinalFields=false,superdevmode=off,user.agent=ie10,videoElementSupport=maybe,webApiUsage=modern,audioElementSupport=maybe,canvasElementSupport=maybe,compiler.useSourceMaps=false,dragEventSupport=maybe,jre.debugMode=DISABLED,touchEventSupport=no,gwt.logging.enabled=FALSE,jre.checkedMode=DISABLED,jre.logging.logLevel=OFF">
+   <javascript size="95583" fragments="1">
+    <fragment initial="true" size="95583" />
    </javascript>
   </compilation>
-  <compilation  id="3" elapsed="1278" totalElapsed="10947"  description="ClientBundle.enableInlining=true,compiler.emulatedStack=false,compiler.predeclare.cross.fragment.references=false,compiler.stackMode=native,compiler.useSymbolMaps=false,gwt.cspCompatModeEnabled=false,gwt.enableDebugId=false,gwt.forceBidi=false,gwt.logging.simpleConsoleHandler=ENABLED,gwt.suppressNonStaticFinalFieldWarnings=false,gwt.uncaughtexceptionhandler.windowonerror=REPORT_IF_NO_HANDLER,history.noDoubleEncoding=false,jre.checks.api=AUTO,jre.checks.bounds=AUTO,jre.checks.checkLevel=NORMAL,jre.checks.numeric=AUTO,jre.checks.type=AUTO,jre.logging.simpleConsoleHandler=ENABLED,locale=default,rpc.XserializeFinalFields=false,superdevmode=off,user.agent=gecko1_8,videoElementSupport=maybe,webApiUsage=modern,audioElementSupport=maybe,canvasElementSupport=maybe,compiler.useSourceMaps=false,dragEventSupport=maybe,jre.debugMode=DISABLED,touchEventSupport=maybe,gwt.logging.enabled=FALSE,jre.checkedMode=DISABLED,jre.logging.logLevel=OFF">
-   <javascript size="94729" fragments="1">
-    <fragment initial="true" size="94729" />
+  <compilation  id="3" elapsed="1662" totalElapsed="24465"  description="ClientBundle.enableInlining=true,compiler.emulatedStack=false,compiler.predeclare.cross.fragment.references=false,compiler.stackMode=native,compiler.useSymbolMaps=false,gwt.cspCompatModeEnabled=false,gwt.enableDebugId=false,gwt.forceBidi=false,gwt.logging.simpleConsoleHandler=ENABLED,gwt.suppressNonStaticFinalFieldWarnings=false,gwt.uncaughtexceptionhandler.windowonerror=REPORT_IF_NO_HANDLER,history.noDoubleEncoding=false,jre.checks.api=AUTO,jre.checks.bounds=AUTO,jre.checks.checkLevel=NORMAL,jre.checks.numeric=AUTO,jre.checks.type=AUTO,jre.logging.simpleConsoleHandler=ENABLED,locale=default,rpc.XserializeFinalFields=false,superdevmode=off,user.agent=gecko1_8,videoElementSupport=maybe,webApiUsage=modern,audioElementSupport=maybe,canvasElementSupport=maybe,compiler.useSourceMaps=false,dragEventSupport=maybe,jre.debugMode=DISABLED,touchEventSupport=maybe,gwt.logging.enabled=FALSE,jre.checkedMode=DISABLED,jre.logging.logLevel=OFF">
+   <javascript size="98412" fragments="1">
+    <fragment initial="true" size="98412" />
    </javascript>
   </compilation>
-  <compilation  id="4" elapsed="1320" totalElapsed="12377"  description="ClientBundle.enableInlining=true,compiler.emulatedStack=false,compiler.predeclare.cross.fragment.references=false,compiler.stackMode=native,compiler.useSymbolMaps=false,gwt.cspCompatModeEnabled=false,gwt.enableDebugId=false,gwt.forceBidi=false,gwt.logging.simpleConsoleHandler=ENABLED,gwt.suppressNonStaticFinalFieldWarnings=false,gwt.uncaughtexceptionhandler.windowonerror=REPORT_IF_NO_HANDLER,history.noDoubleEncoding=false,jre.checks.api=AUTO,jre.checks.bounds=AUTO,jre.checks.checkLevel=NORMAL,jre.checks.numeric=AUTO,jre.checks.type=AUTO,jre.logging.simpleConsoleHandler=ENABLED,locale=default,rpc.XserializeFinalFields=false,superdevmode=off,user.agent=safari,videoElementSupport=maybe,webApiUsage=modern,audioElementSupport=maybe,canvasElementSupport=maybe,compiler.useSourceMaps=false,dragEventSupport=maybe,jre.debugMode=DISABLED,touchEventSupport=maybe,gwt.logging.enabled=FALSE,jre.checkedMode=DISABLED,jre.logging.logLevel=OFF">
-   <javascript size="92083" fragments="1">
-    <fragment initial="true" size="92083" />
+  <compilation  id="4" elapsed="1472" totalElapsed="26038"  description="ClientBundle.enableInlining=true,compiler.emulatedStack=false,compiler.predeclare.cross.fragment.references=false,compiler.stackMode=native,compiler.useSymbolMaps=false,gwt.cspCompatModeEnabled=false,gwt.enableDebugId=false,gwt.forceBidi=false,gwt.logging.simpleConsoleHandler=ENABLED,gwt.suppressNonStaticFinalFieldWarnings=false,gwt.uncaughtexceptionhandler.windowonerror=REPORT_IF_NO_HANDLER,history.noDoubleEncoding=false,jre.checks.api=AUTO,jre.checks.bounds=AUTO,jre.checks.checkLevel=NORMAL,jre.checks.numeric=AUTO,jre.checks.type=AUTO,jre.logging.simpleConsoleHandler=ENABLED,locale=default,rpc.XserializeFinalFields=false,superdevmode=off,user.agent=safari,videoElementSupport=maybe,webApiUsage=modern,audioElementSupport=maybe,canvasElementSupport=maybe,compiler.useSourceMaps=false,dragEventSupport=maybe,jre.debugMode=DISABLED,touchEventSupport=maybe,gwt.logging.enabled=FALSE,jre.checkedMode=DISABLED,jre.logging.logLevel=OFF">
+   <javascript size="95773" fragments="1">
+    <fragment initial="true" size="95773" />
    </javascript>
   </compilation>
  </compilations>
